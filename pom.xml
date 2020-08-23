@@ -11,6 +11,7 @@
   <modules>
     <module>jwt</module>
     <module>redis_demo</module>
+    <module>spring_data_jpa</module>
   </modules>
 
   <parent>
