@@ -18,4 +18,5 @@ public interface PersonRepository extends CrudRepository<Person, Integer> {
 
   @Transactional
   List<Person> removeByAge(Integer age);
+
 }

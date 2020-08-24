@@ -12,4 +12,5 @@ public class MyKeyGenerator implements KeyGenerator {
   public Object generate(Object target, Method method, Object... params) {
     return "";
   }
+
 }

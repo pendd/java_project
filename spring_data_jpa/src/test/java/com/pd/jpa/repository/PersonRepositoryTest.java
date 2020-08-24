@@ -98,4 +98,5 @@ public class PersonRepositoryTest {
   void removeByLastName() {
     repository.removeByAge(21).forEach(System.out::println);
   }
+
 }
