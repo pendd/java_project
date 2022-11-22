@@ -8,4 +8,5 @@ import org.springframework.data.repository.PagingAndSortingRepository;
  * @author: pd
  * @date: 2020-08-22 9:47 上午
  */
-public interface StudentRepository extends PagingAndSortingRepository<Student, Integer> {}
+public interface StudentRepository extends PagingAndSortingRepository<Student, Integer> {
+}

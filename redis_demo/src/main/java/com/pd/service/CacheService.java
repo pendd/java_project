@@ -23,4 +23,10 @@ public class CacheService {
   public List<Msg> getForMysql() {
     return template.query("select * from msg", new BeanPropertyRowMapper<>(Msg.class));
   }
+
+
+  @Cacheable(value = Constent.SQL_KEY, key = "#name")
+  public List<Msg> getMsg(String name) {return null;}
+
+
 }
