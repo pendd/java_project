@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+spring:
+  thymeleaf:
+    cache: off
+    encoding: UTF-8
+    mode: HTML
+    servlet:
+      content-type: text/html
+    check-template-location: true
+    suffix: .html
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring-security?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8&useSSL=true
+    username: root
+    password: mysql8.0

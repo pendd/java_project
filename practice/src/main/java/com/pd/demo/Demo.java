@@ -1,4 +1,4 @@
-package com.pd.kafka;
+package com.pd.demo;
 
 import org.junit.Test;
 

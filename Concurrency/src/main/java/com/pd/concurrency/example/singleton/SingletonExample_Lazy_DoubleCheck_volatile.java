@@ -1,6 +1,6 @@
 package com.pd.concurrency.example.singleton;
 
-import com.pd.concurrency.annotations.NotThreadSafe;
+import com.pd.concurrency.annotations.ThreadSafe;
 
 /**
  * 懒汉模式 -> 双重同步锁单例模式 <br>
@@ -9,10 +9,10 @@ import com.pd.concurrency.annotations.NotThreadSafe;
  * @author: pd
  * @date: 2021-02-25 下午3:23
  */
-@NotThreadSafe
-public class SingletonExample_Lazy_DoubleCheck {
+@ThreadSafe
+public class SingletonExample_Lazy_DoubleCheck_volatile {
 
-  private SingletonExample_Lazy_DoubleCheck() {}
+  private SingletonExample_Lazy_DoubleCheck_volatile() {}
 
   // 1、memory = allocate() 分配对象的内存空间
   // 2、ctorInstance() 初始化对象
@@ -24,13 +24,14 @@ public class SingletonExample_Lazy_DoubleCheck {
   // 3、instance = memory 设置instance指向刚分配的内存
   // 2、ctorInstance() 初始化对象
 
-  private static SingletonExample_Lazy_DoubleCheck instance = null;
+  // 单例对象 volatile + 双重检测机制 -> 禁止指令重排
+  private static volatile SingletonExample_Lazy_DoubleCheck_volatile instance = null;
 
-  public static SingletonExample_Lazy_DoubleCheck getInstance() {
+  public static SingletonExample_Lazy_DoubleCheck_volatile getInstance() {
     if (instance == null) { // 双重检测机制
-      synchronized (SingletonExample_Lazy_DoubleCheck.class) { // 同步锁
+      synchronized (SingletonExample_Lazy_DoubleCheck_volatile.class) { // 同步锁
         if (instance == null) {
-          instance = new SingletonExample_Lazy_DoubleCheck();
+          instance = new SingletonExample_Lazy_DoubleCheck_volatile();
         }
       }
     }

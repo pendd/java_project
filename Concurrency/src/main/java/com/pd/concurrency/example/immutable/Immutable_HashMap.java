@@ -7,7 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @NotThreadSafe
-public class ImmutableExample1 {
+public class Immutable_HashMap {
 
   private static final Integer a = 1;
   private static final String b = "2";
@@ -20,6 +20,7 @@ public class ImmutableExample1 {
   }
 
   public static void main(String[] args) {
+    // 因为final修饰 所以下面三个在编译器就报错
     //        a = 2;
     //        b = "3";
     //        map = Maps.newHashMap();
@@ -27,6 +28,7 @@ public class ImmutableExample1 {
     log.info("{}", map.get(1));
   }
 
+  // final 修饰局部入参变量也是不可以修改的
   private void test(final int a) {
     //        a = 1;
   }

@@ -6,9 +6,10 @@ import java.util.HashMap;
 import java.util.Map;
 import lombok.extern.slf4j.Slf4j;
 
+/** 不可修改 当修改时 产生java.lang.UnsupportedOperationException */
 @Slf4j
 @ThreadSafe
-public class ImmutableExample2 {
+public class Immutable_unmodifiableMap {
 
   private static Map<Integer, Integer> map = new HashMap<>();
 

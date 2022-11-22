@@ -1,4 +1,4 @@
-package com.pd.config;
+package com.pd.kafka.config;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;

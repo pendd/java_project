@@ -11,5 +11,16 @@
 
   <artifactId>consume</artifactId>
 
-
+  <dependencies>
+    <dependency>
+      <groupId>com.pd</groupId>
+      <artifactId>model</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>com.pd</groupId>
+      <artifactId>producer</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
 </project>

@@ -1,9 +1,18 @@
+package com.pd.controller;
+
+import com.pd.entity.LogAddRequestDto;
+import com.pd.entity.LogRequestDto;
+import com.pd.entity.LogResponseDto;
+import com.pd.service.LogService;
+import com.pd.utils.HBaseUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -14,13 +23,25 @@ import java.util.Map;
 public class DemoController {
 
   @Autowired private HBaseUtils hBaseUtils;
+  @Autowired private LogService logService;
 
-  @RequestMapping(value = "/test")
-  public Map<String, Object> test() throws IOException {
-    String str = hBaseUtils.scanAllRecord("sixmonth"); // 扫描表
+  @GetMapping(value = "/test")
+  public List<LogResponseDto> test() throws Exception {
+    String str = hBaseUtils.scanAllRecord("log"); // 扫描表
     System.out.println("获取到hbase的内容：" + str);
     Map<String, Object> map = new HashMap<String, Object>();
     map.put("hbaseContent", str);
-    return map;
+    return null;
+    //    return hBaseUtils.scanAll("log");
+  }
+
+  @PostMapping("/add")
+  public String add(@RequestBody LogAddRequestDto dto) throws Exception {
+    return logService.addLog(dto);
+  }
+
+  @PostMapping("/get")
+  public List<LogResponseDto> get(@RequestBody LogRequestDto requestDto) throws Exception {
+    return logService.get(requestDto);
   }
 }

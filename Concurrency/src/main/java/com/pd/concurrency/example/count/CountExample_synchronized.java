@@ -1,4 +1,4 @@
-package com.pd.concurrency.example;
+package com.pd.concurrency.example.count;
 
 import com.pd.concurrency.annotations.ThreadSafe;
 import java.util.concurrent.CountDownLatch;

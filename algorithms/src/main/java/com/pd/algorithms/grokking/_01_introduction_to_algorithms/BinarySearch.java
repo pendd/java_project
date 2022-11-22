@@ -4,7 +4,9 @@ package com.pd.algorithms.grokking._01_introduction_to_algorithms;
  * @author: YCWB0382
  * @date: 2021-08-16 14:28
  */
-public class _01_binary_search {
+public class BinarySearch {
+
+  private BinarySearch() {}
 
   public static int binarySearch(int[] list, int value) {
 

@@ -1,4 +1,4 @@
-package com.mmall.concurrency.functionalInterface;
+package com.pd.concurrency.functionalInterface;
 
 /**
  * @author: pd

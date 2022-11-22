@@ -1,24 +1,35 @@
 package com.pd.concurrency.example.singleton;
 
-import com.pd.concurrency.annotations.NotThreadSafe;
+import com.pd.concurrency.annotations.Recommend;
+import com.pd.concurrency.annotations.ThreadSafe;
 
 /**
- * 饿汉模式 单例实例在类装载时进行创建
+ * 枚举模式：最安全 <br>
+ * 安全发布对象
  *
  * @author: pd
  * @date: 2021-02-25 下午3:26
  */
-@NotThreadSafe
-public class SingletonExample_Hungry {
+@ThreadSafe
+@Recommend
+public class SingletonExample_Enum {
 
-  // 私有构造函数
-  private SingletonExample_Hungry() {}
+  private SingletonExample_Enum() {}
 
-  // 单例对象
-  private static SingletonExample_Hungry instance = new SingletonExample_Hungry();
+  public static SingletonExample_Enum instance = Singleton.INSTANCE.getInstance();
 
-  // 静态的工厂方法
-  public static SingletonExample_Hungry getInstance() {
-    return instance;
+  private enum Singleton {
+    INSTANCE;
+
+    private SingletonExample_Enum singleton;
+
+    // JVM保证这个方法绝对只调用一次
+    Singleton() {
+      singleton = new SingletonExample_Enum();
+    }
+
+    public SingletonExample_Enum getInstance() {
+      return singleton;
+    }
   }
 }

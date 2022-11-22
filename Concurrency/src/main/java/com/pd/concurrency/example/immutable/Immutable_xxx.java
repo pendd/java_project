@@ -6,7 +6,7 @@ import com.google.common.collect.ImmutableSet;
 import com.pd.concurrency.annotations.ThreadSafe;
 
 @ThreadSafe
-public class ImmutableExample3 {
+public class Immutable_xxx {
 
   private static final ImmutableList<Integer> list = ImmutableList.of(1, 2, 3);
 

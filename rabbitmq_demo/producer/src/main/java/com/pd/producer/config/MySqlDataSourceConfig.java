@@ -1,7 +1,6 @@
 package com.pd.producer.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
-import javax.sql.DataSource;
 import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -13,6 +12,8 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.stereotype.Component;
+
+import javax.sql.DataSource;
 
 /** @author dpeng */
 @Component

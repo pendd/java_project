@@ -1,4 +1,4 @@
-package com.pd.ioc.example.model.service;
+package com.pd.ioc.example.service;
 
 import com.pd.ioc.example.model.User;
 

@@ -13,7 +13,7 @@ import org.springframework.security.oauth2.provider.token.TokenEnhancer;
  * @author: pd
  * @date: 2021-02-18 上午11:10
  */
-public class JwtTokenEnhance implements TokenEnhancer {
+public class JwtTokenEnhancer implements TokenEnhancer {
 
   @Override
   public OAuth2AccessToken enhance(

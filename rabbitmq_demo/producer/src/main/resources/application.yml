@@ -46,7 +46,7 @@ server:
 mybatis:
   type-aliases-package: com.pd.producer
   mapper-locations: classpath*:/mappers/*.xml
-  type-handlers-package: com.pd.producer.config
+  type-handlers-package: com.pd.producer.com.pd.config
 logging:
   level:
     tk:

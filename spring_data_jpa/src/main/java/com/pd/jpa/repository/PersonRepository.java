@@ -1,9 +1,10 @@
 package com.pd.jpa.repository;
 
 import com.pd.jpa.entity.Person;
-import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 /**
  * @description:

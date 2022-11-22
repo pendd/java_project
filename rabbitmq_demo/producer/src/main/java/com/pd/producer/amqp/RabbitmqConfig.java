@@ -3,7 +3,6 @@ package com.pd.producer.amqp;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.pd.producer.constant.Constants;
 import com.pd.producer.mapper.mysql.BrokerMessageLogMapper;
-import java.time.LocalDateTime;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.amqp.core.Binding;
@@ -19,6 +18,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import java.time.LocalDateTime;
 
 /** @author dpeng */
 @Configuration

@@ -1,0 +1,8 @@
+server:
+  port: 8791
+hbase:
+  conf:
+    confMaps:
+      'hbase.zookeeper.quorum': '10.128.173.183:2181'
+      # 每次rpc的请求记录数
+      'hbase.client.scanner.caching': 50

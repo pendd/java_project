@@ -1,4 +1,6 @@
-package PACKAGE_NAME;
+package com.pd;
+
+import java.lang.reflect.Method;
 
 /**
  * @author: pd
@@ -6,4 +8,15 @@ package PACKAGE_NAME;
  */
 public class TestDemo {
 
+  public static void main(String[] args) throws Exception {
+    Class<?> clazz = Class.forName("com.pd.InitDemo");
+    Method[] methods = clazz.getMethods();
+    for (Method method : methods) {
+      if (method.isAnnotationPresent(InitMethod.class)) {
+
+        System.out.println("方法名:" + method.getName());
+        method.invoke(clazz.getConstructor(null).newInstance(null));
+      }
+    }
+  }
 }

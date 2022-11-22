@@ -1,11 +1,12 @@
-package com.pd.security.demo.handler;
+package com.pd.security.handler;
 
-import java.io.IOException;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.web.authentication.AuthenticationFailureHandler;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import org.springframework.security.core.AuthenticationException;
-import org.springframework.security.web.authentication.AuthenticationFailureHandler;
+import java.io.IOException;
 
 /**
  * @author: pd
@@ -13,7 +14,7 @@ import org.springframework.security.web.authentication.AuthenticationFailureHand
  */
 public class MyAuthenticationFailureHandler implements AuthenticationFailureHandler {
 
-  private String url;
+  private final String url;
 
   public MyAuthenticationFailureHandler(String url) {
     this.url = url;

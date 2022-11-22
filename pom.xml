@@ -1,32 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.pd</groupId>
-  <artifactId>java_project</artifactId>
-  <packaging>pom</packaging>
-  <version>1.0-SNAPSHOT</version>
-  <modules>
-    <module>jwt</module>
-    <module>redis_demo</module>
-    <module>spring_data_jpa</module>
-  </modules>
+    <groupId>com.pd</groupId>
+    <artifactId>java_project</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>jwt</module>
+        <module>redis_demo</module>
+        <module>spring_data_jpa</module>
+        <module>rabbitmq_demo</module>
+        <module>annotation_demo</module>
+        <module>spring_security</module>
+        <module>Spring_Security_Oauth2</module>
+        <module>Spring_Security_SSO_Client</module>
+        <module>Concurrency</module>
+        <module>practice</module>
+        <module>spring_ioc</module>
+        <module>spring-kafka</module>
+        <module>algorithms</module>
+        <module>time</module>
+        <module>01-design-pattern</module>
+        <module>hbase_demo</module>
+        <module>test</module>
+    </modules>
 
-  <parent>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.3.2.RELEASE</version>
-    <relativePath/> <!-- lookup parent from repository -->
-  </parent>
-
-  <build>
-    <plugins>
-      <plugin>
+    <parent>
         <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-      </plugin>
-    </plugins>
-  </build>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.2.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
 </project>
